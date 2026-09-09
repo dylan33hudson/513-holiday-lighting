@@ -51,9 +51,26 @@ a more beautiful result than you'd manage yourself.
 ## Content constraints
 
 - Do NOT add invented testimonials, star ratings, review counts, or installation numbers.
+- Do NOT present AI-generated or stock houses as our work. Gallery, testimonials, and before/after
+  slots take real installs only. Until the first 2026 installs go up in November, the gallery is an
+  honest empty state that says so.
 - Keep student-founded identity — it's authentic positioning (young, hungry, community-rooted).
-- Keep all existing copy verbatim unless fixing a grammatical error.
-- The quote form submits to Formspree — endpoint ID still needs to be replaced.
+- The hero copy follows the new hero direction, not the copy in the pre-2026 `index.html`:
+  headline "Be the house the whole street slows down for.", lede "Custom-cut, commercial-grade
+  Christmas lights — designed, installed, maintained all season, then taken down and stored by us.
+  You pick the look on your roofline. We handle every ladder, clip, and timer.", CTAs "Get a free
+  estimate" and "See last season's installs", and the trust line "Fully insured · Takedown +
+  storage included · Installs begin [NOV 1]". Bracketed values are placeholders to confirm.
+- Outside the hero, keep existing copy verbatim unless fixing a grammatical error. Where the
+  quote-form design board supplies copy (pricing, form labels, error and success messages), that
+  copy wins over the older `index.html` equivalents.
+- Pricing is flat and public: $6 per linear foot, $850 minimum, quoted on the actual roofline and
+  fixed before install. Packages are pure $6/ft math: The Classic from $850 (~140 ft), The Signature
+  from $1,500 (~250 ft), The Estate from $2,400 (~400 ft). Add-on prices carry over from the
+  original page. Extra roofline is $6/ft, not the old $6.50.
+- Service area is Hamilton, Butler, Warren, and Clermont counties (West Chester is in Butler).
+- The quote form submits to Netlify Forms (`data-netlify`), which also carries the photo upload.
+  Notifications are configured in the Netlify dashboard, not in code.
 
 ## What success looks like
 

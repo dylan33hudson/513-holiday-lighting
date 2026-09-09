@@ -1,0 +1,7 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "static", "runtimeExecutable": "node", "runtimeArgs": ["/private/tmp/claude-501/-Users-dylan33hudson-Desktop-Claude-Code/099f1133-3582-4a9e-b246-cfa909822d2f/scratchpad/serve.js"], "port": 8513 },
+    { "name": "design", "runtimeExecutable": "node", "runtimeArgs": ["/private/tmp/claude-501/-Users-dylan33hudson-Desktop-Claude-Code/099f1133-3582-4a9e-b246-cfa909822d2f/scratchpad/serve2.js"], "port": 8514 }
+  ]
+}

@@ -1,0 +1,232 @@
+/* ============================================================================
+   513 HOLIDAY LIGHTING — DESIGN TOKENS
+   Single source of truth. This file lives in the repo root and is imported by
+   index.html. No hardcoded hex anywhere else — if a value isn't here, add it here.
+
+   Base palette is sampled from the live hero (do not re-pick these six).
+   Everything else is DERIVED from them into semantic, reusable roles.
+   Recalibrate here in one place — components reference roles, not raw hex.
+   ============================================================================ */
+
+:root {
+  /* --------------------------------------------------------------------------
+     0 · BRAND PRIMITIVES  (locked — sampled from the live hero)
+     -------------------------------------------------------------------------- */
+  --hl-ink:        #0A0907; /* warm near-black ground */
+  --hl-cream:      #FFF4D8; /* headline / high emphasis */
+  --hl-gold:       #D9B351; /* accent, lit bulbs */
+  --hl-gold-deep:  #C69F3F; /* button fill (gradient bottom) */
+  --hl-warm-grey:  #C9BCA4; /* body copy, nav */
+  --hl-dim:        #8A8071; /* micro copy */
+
+  /* Decorative bulb alternates (from the hero scene) */
+  --bulb-warm-white: #FFE9C4;
+  --bulb-red:        #C0472F;
+  --bulb-cool-white: #BFD4E8;
+
+  /* --------------------------------------------------------------------------
+     1 · SURFACES  (derived warm-dark elevation ladder above the ink ground)
+     -------------------------------------------------------------------------- */
+  --surface-deep: #050403; /* deepest ground: hero sky top, footer */
+  --surface-0: #0A0907; /* page ground */
+  --surface-1: #14110D; /* sections that lift off the ground */
+  --surface-2: #1E1914; /* cards, form fields */
+  --surface-3: #2A231B; /* raised / hovered card, popovers */
+  --surface-inset: #0D0B08; /* recessed wells inside a card */
+
+  /* --------------------------------------------------------------------------
+     2 · TEXT  (emphasis ladder)
+     -------------------------------------------------------------------------- */
+  --text-high:    #FFF4D8; /* headlines, key numbers */
+  --text-body:    #C9BCA4; /* paragraphs, nav */
+  --text-muted:   #8A8071; /* captions, legal, placeholder.
+                              ONLY on --surface-0 (5.12:1). On --surface-2 it drops to
+                              4.49:1 and misses AA — use --text-body inside cards. */
+  --text-on-gold: #0A0907; /* dark text sitting on a gold fill */
+  --text-on-gold-muted: #3A2E14; /* secondary text on gold */
+
+  /* --------------------------------------------------------------------------
+     3 · ACCENT / GOLD  (the product itself — use sparingly, it means "lit")
+     -------------------------------------------------------------------------- */
+  --accent:        #D9B351;
+  --accent-deep:   #C69F3F;
+  --accent-bright: #E7C56A; /* hover lift on gold surfaces */
+  --accent-dim:    #8F7530; /* disabled / pressed gold — DO NOT reuse for graphics */
+  --accent-unlit:  #7A6330; /* unlit roofline marks in the configurator.
+                               3.34:1 on ground — clears the 3:1 floor for non-text graphics. */
+  --accent-tint:   rgba(217, 179, 81, 0.16); /* gold fill: ghost hover, secondary gold surfaces.
+                                                 Use this wherever a spec asks for an "accent fill".
+                                                 Solid gold gradient is reserved for ONE primary CTA per screen. */
+  --accent-line:   rgba(217, 179, 81, 0.38); /* gold hairline / focus border */
+
+  /* --------------------------------------------------------------------------
+     4 · BORDERS  (warm-grey at alpha so they read on any surface level)
+     -------------------------------------------------------------------------- */
+  --border-subtle:  rgba(201, 188, 164, 0.10);
+  --border-default: rgba(201, 188, 164, 0.18);
+  --border-strong:  rgba(201, 188, 164, 0.30);
+  --border-focus:   var(--accent);
+  /* Hairlines and dividers use these — never --surface-3.
+     A surface is a fill; a border is a border. */
+
+  /* --------------------------------------------------------------------------
+     5 · FEEDBACK  (form + system states — warm-harmonized, not stock)
+        Each role ships a text/legible tone, a fill tint, and a border.
+     -------------------------------------------------------------------------- */
+  --error:        #E06A50; /* legible on dark; derived from bulb-red */
+  --error-tint:   rgba(192, 71, 47, 0.14);
+  --error-border: rgba(224, 106, 80, 0.55);
+
+  --success:        #7FB069; /* warm sage, not neon */
+  --success-tint:   rgba(127, 176, 105, 0.14);
+  --success-border: rgba(127, 176, 105, 0.55);
+
+  --warning:        #E39A3C; /* orange-amber, deliberately distinct from brand gold */
+  --warning-tint:   rgba(227, 154, 60, 0.14);
+  --warning-border: rgba(227, 154, 60, 0.55);
+
+  /* --------------------------------------------------------------------------
+     6 · TYPOGRAPHY
+        One family: Archivo (variable). Headline uses width 96 / weight 800.
+        Swap the whole system by changing --font-sans.
+     -------------------------------------------------------------------------- */
+  --font-sans: 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: var(--font-sans);
+
+  /* variation settings helpers (apply to display type) */
+  --vs-display: 'wght' 800, 'wdth' 96;
+  --vs-heading: 'wght' 700, 'wdth' 100;
+  --vs-body:    'wght' 400, 'wdth' 100;
+  --vs-label:   'wght' 500, 'wdth' 82;  /* tracked uppercase labels — the technical voice */
+
+  /* Fluid type scale — min at 360px, max around 1280px */
+  --fs-eyebrow:  0.8125rem;                       /* 13px  labels/eyebrows */
+  --fs-micro:    0.75rem;                          /* 12px  legal/captions  */
+  --fs-small:    0.875rem;                         /* 14px                  */
+  --fs-body:     1rem;                             /* 16px  base paragraph  */
+  --fs-body-lg:  clamp(1.0625rem, 0.98rem + 0.4vw, 1.1875rem); /* lede      */
+  --fs-h3:       clamp(1.25rem, 1.12rem + 0.6vw, 1.625rem);
+  --fs-h2:       clamp(2rem, 1.3rem + 2.4vw, 3.5rem);
+  --fs-h1:       clamp(2.5rem, 1.6rem + 4.1vw, 4.5rem);  /* section hero    */
+  --fs-display:  clamp(2.75rem, 1.2rem + 7vw, 7.25rem); /* homepage hero   */
+
+  /* Line heights */
+  --lh-display: 1.02;
+  --lh-heading: 1.1;
+  --lh-body:    1.6;
+  --lh-tight:   1.35;
+
+  /* Letter spacing */
+  --ls-display: -0.015em;
+  --ls-heading: -0.01em;
+  --ls-body:    0;
+  --ls-eyebrow:  0.16em;  /* tracked uppercase labels (brand already uses these) */
+  --ls-micro:    0.04em;
+
+  /* Weights (variable axis stops) */
+  --w-regular:  400;
+  --w-medium:   500;
+  --w-semibold: 600;
+  --w-bold:     700;
+  --w-black:    800;
+
+  /* --------------------------------------------------------------------------
+     7 · SPACING  (4px base, named steps — use these, not arbitrary px)
+     -------------------------------------------------------------------------- */
+  --space-1:  0.25rem;  /*  4 */
+  --space-2:  0.5rem;   /*  8 */
+  --space-3:  0.75rem;  /* 12 */
+  --space-4:  1rem;     /* 16 */
+  --space-5:  1.5rem;   /* 24 */
+  --space-6:  2rem;     /* 32 */
+  --space-7:  3rem;     /* 48 */
+  --space-8:  4rem;     /* 64 */
+  --space-9:  6rem;     /* 96 */
+  --space-10: 8rem;     /* 128 — section rhythm on desktop */
+  --space-11: 10rem;    /* 160 — hero-adjacent and editorial breathing room */
+
+  /* --------------------------------------------------------------------------
+     8 · RADIUS
+     -------------------------------------------------------------------------- */
+  --radius-sm:   6px;   /* inputs, badges */
+  --radius-md:   10px;  /* buttons */
+  --radius-lg:   16px;  /* cards */
+  --radius-xl:   24px;  /* feature panels */
+  --radius-pill: 999px; /* chips, sticky bar */
+
+  /* --------------------------------------------------------------------------
+     9 · SHADOW & GLOW  (subtle on dark; gold glow = "lit")
+        --glow-gold doubles as the CSS soft shadow under background-removed
+        house renders, which lose their baked drop shadow.
+     -------------------------------------------------------------------------- */
+  --shadow-sm:  0 1px 2px rgba(0, 0, 0, 0.45);
+  --shadow-md:  0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg:  0 20px 52px rgba(0, 0, 0, 0.55);
+  --glow-gold:  0 0 28px rgba(217, 179, 81, 0.32);
+  --glow-gold-strong: 0 0 44px rgba(217, 179, 81, 0.45);
+  --focus-ring: 0 0 0 3px rgba(217, 179, 81, 0.45);
+
+  /* --------------------------------------------------------------------------
+     10 · LAYOUT
+     -------------------------------------------------------------------------- */
+  --container:      1200px; /* max content width */
+  --container-text: 68ch;   /* prose measure (< 80 chars) */
+  --gutter:         var(--space-5);
+
+  /* Breakpoints (reference — CSS can't use vars in media queries;
+     kept here so every tool uses the same numbers) */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+
+  /* --------------------------------------------------------------------------
+     11 · MOTION  (restrained — respect prefers-reduced-motion in components)
+     -------------------------------------------------------------------------- */
+  --ease:      cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-out:  cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast:  140ms;
+  --dur-base:  220ms;
+  --dur-slow:  420ms;
+
+  /* --------------------------------------------------------------------------
+     12 · COMPONENT ROLES  (semantic aliases → recolor a whole component here)
+     -------------------------------------------------------------------------- */
+  /* Primary (gold) button */
+  --btn-primary-bg-top:    var(--accent);
+  --btn-primary-bg-bottom: var(--accent-deep);
+  --btn-primary-text:      var(--text-on-gold);
+  --btn-primary-hover-top: var(--accent-bright);
+  --btn-primary-hover-bottom: var(--accent);
+  --btn-primary-active:    var(--accent-dim);
+  --btn-primary-disabled:  #5A4E32;
+
+  /* Ghost button */
+  --btn-ghost-text:        var(--text-high);
+  --btn-ghost-border:      var(--border-strong);
+  --btn-ghost-hover-bg:    var(--accent-tint);
+  --btn-ghost-hover-border: var(--accent-line);
+
+  /* Inputs */
+  --field-bg:          var(--surface-2);
+  --field-border:      var(--border-default);
+  --field-border-hover: var(--border-strong);
+  --field-text:        var(--text-high);
+  --field-placeholder: var(--text-body); /* fields sit on --surface-2, where --text-muted misses AA */
+  --field-focus-border: var(--accent);
+
+  /* Cards */
+  --card-bg:     var(--surface-2);
+  --card-border: var(--border-default);
+  --card-radius: var(--radius-lg);
+  --card-shadow: var(--shadow-md);
+}
+
+/* prefers-reduced-motion: components should gate animation behind this */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+  }
+}
