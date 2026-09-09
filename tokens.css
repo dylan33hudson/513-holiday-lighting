@@ -59,6 +59,13 @@
                                                  Solid gold gradient is reserved for ONE primary CTA per screen. */
   --accent-line:   rgba(217, 179, 81, 0.38); /* gold hairline / focus border */
 
+  /* Brand green — the second brand color (logo). Structural accents only: rules, index numerals,
+     icon wells, tags. Gold stays the color of "lit". */
+  --green:        #1F6B45; /* fills and lines */
+  --green-bright: #34975F; /* text-sized use: 5.1:1 on --surface-0 */
+  --green-tint:   rgba(31, 107, 69, 0.20);
+  --green-line:   rgba(52, 151, 95, 0.45);
+
   /* --------------------------------------------------------------------------
      4 · BORDERS  (warm-grey at alpha so they read on any surface level)
      -------------------------------------------------------------------------- */

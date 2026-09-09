@@ -71,6 +71,7 @@ animating `height`/`margin`), flag the conflict rather than silently complying.
 
 - `assets/logo-cream-lockup.png` — nav mark. `logo-gold-lockup.png`, `mark-cream-512.png`,
   `mark-gold-512.png` are alternates.
+- `assets/founders/founder-1.jpg`, `founder-2.jpg` — the About section portraits (originals in `docs/founder-originals/`).
 - `assets/hero-graded.jpg` — hero photo (the CSS bokeh gradient in `.hero__bokeh` paints behind it
   as the fallback). `assets/products/*.jpg` — the four product photos.
 - `assets/og-image.jpg`, `favicon-32.png`, `apple-touch-icon.png`, `icon-512.png` — referenced from
@@ -89,7 +90,7 @@ Search for `REPLACE` in `index.html`. Also:
   the first 2026 installs go up in November.
 - Service-area city list — verify against actual coverage.
 - Social links (Facebook/Instagram) — unset.
-- Founders photo in `#about` — a marked placeholder until it exists.
+- Founder names and titles in `#about` captions — currently the generic "Co-founder".
 
 ## Motion and markup constraints
 
