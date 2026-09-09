@@ -90,7 +90,7 @@ Search for `REPLACE` in `index.html`. Also:
   the first 2026 installs go up in November.
 - Service-area city list — verify against actual coverage.
 - Social links (Facebook/Instagram) — unset.
-- Founder names and titles in `#about` captions — currently the generic "Co-founder".
+- Founder titles in `#about` captions read "Co-founder"; update if roles change.
 
 ## Motion and markup constraints
 
