@@ -85,7 +85,7 @@ animating `height`/`margin`), flag the conflict rather than silently complying.
 ## Known placeholders that still need real values
 
 Search for `REPLACE` in `index.html`. Also:
-- Canonical URL and absolute og:image URL once the domain exists.
+- Canonical, og:url, og:image, and schema url point at https://513-holiday-lighting.netlify.app; update all four if a custom domain is added.
 - Testimonials and gallery — real installs only; the gallery ships as an honest empty state until
   the first 2026 installs go up in November.
 - Service-area city list — verify against actual coverage.
