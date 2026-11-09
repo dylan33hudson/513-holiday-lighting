@@ -15,13 +15,13 @@
   <meta property="og:title" content="513 Holiday Lighting | Be the house the whole street slows down for.">
   <meta property="og:description" content="Custom-cut, commercial-grade Christmas lights for Greater Cincinnati — designed, installed, maintained all season, then taken down and stored by us. Send a photo, get a quote within one business day.">
   <meta property="og:url" content="https://513holidaylighting.com/">
-  <meta property="og:image" content="https://513holidaylighting.com/assets/og-image.jpg">
+  <meta property="og:image" content="https://513holidaylighting.com/assets/og-image-2026.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="513 Holiday Lighting | Be the house the whole street slows down for.">
   <meta name="twitter:description" content="Custom-cut, commercial-grade Christmas lights for Greater Cincinnati. Send a photo, get a quote within one business day.">
-  <meta name="twitter:image" content="https://513holidaylighting.com/assets/og-image.jpg">
+  <meta name="twitter:image" content="https://513holidaylighting.com/assets/og-image-2026.jpg">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..112,400..800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/hero-graded.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/hero-dusk-1920.webp" imagesrcset="assets/hero-dusk-1280.webp 1280w, assets/hero-dusk-1920.webp 1920w, assets/hero-dusk-2560.webp 2560w" imagesizes="100vw" fetchpriority="high">
 
   <!-- tokens.css is the single source of truth for every color, size, radius, and motion value -->
   <link rel="stylesheet" href="tokens.css">
@@ -44,7 +44,7 @@
     "@type": "LocalBusiness",
     "name": "513 Holiday Lighting LLC",
     "url": "https://513holidaylighting.com/",
-    "image": "https://513holidaylighting.com/assets/og-image.jpg",
+    "image": "https://513holidaylighting.com/assets/og-image-2026.jpg",
     "description": "Professional holiday lighting design, installation, maintenance, and removal serving Greater Cincinnati, Ohio.",
     "telephone": "+13304664011",
     "email": "holiday513lighting@outlook.com",
@@ -141,7 +141,7 @@ button{font:inherit}
 /* ─── HERO ──────────────────────────────── */
 .hero{position:relative;min-height:100svh;overflow:hidden;background:var(--surface-deep);isolation:isolate;display:flex;flex-direction:column;justify-content:center}
 .hero__bokeh{position:absolute;inset:0;z-index:0;background:radial-gradient(22% 30% at 84% 42%,color-mix(in srgb,var(--bulb-warm-white) 55%,transparent),transparent 70%),radial-gradient(8% 12% at 66% 30%,color-mix(in srgb,var(--accent) 45%,transparent),transparent 70%),radial-gradient(7% 10% at 74% 26%,color-mix(in srgb,var(--accent) 35%,transparent),transparent 70%),radial-gradient(9% 13% at 60% 44%,color-mix(in srgb,var(--accent) 28%,transparent),transparent 70%),radial-gradient(6% 9% at 88% 20%,color-mix(in srgb,var(--accent) 30%,transparent),transparent 70%),linear-gradient(180deg,var(--surface-deep),var(--surface-0))}
-.hero__img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;object-position:72% 50%;z-index:0}
+.hero__img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;object-position:88% 55%;z-index:0}
 .hero__scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,var(--surface-0) 0%,color-mix(in srgb,var(--surface-0) 92%,transparent) 30%,color-mix(in srgb,var(--surface-0) 55%,transparent) 52%,transparent 74%),linear-gradient(180deg,color-mix(in srgb,var(--surface-0) 55%,transparent) 0%,transparent 22%,transparent 70%,var(--surface-0) 100%)}
 .hero__grade{position:absolute;inset:0;z-index:1;background:radial-gradient(60% 70% at 84% 40%,color-mix(in srgb,var(--accent) 18%,transparent),transparent 60%);mix-blend-mode:screen;animation:breathe 6s ease-in-out infinite}
 .hero__noise{position:absolute;inset:0;z-index:2;opacity:.06;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
@@ -251,14 +251,18 @@ button{font:inherit}
 .cell:hover .pimg{transform:scale(1.03)}
 .ph{display:flex;align-items:center;justify-content:center;border:1px dashed var(--border-strong);border-radius:var(--radius-md);background:repeating-linear-gradient(135deg,transparent 0 10px,color-mix(in srgb,var(--text-body) 5%,transparent) 10px 11px),var(--surface-inset);color:var(--text-body);font-variation-settings:var(--vs-label);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:var(--space-4)}
 
-/* ─── GALLERY (empty state) ─────────────── */
-.empty{padding:var(--space-7);border:1px solid var(--accent-line);border-radius:var(--radius-lg);background:var(--surface-2);display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:var(--space-6);align-items:center;box-shadow:var(--glow-gold)}
-.empty .mark{width:56px;height:56px;border-radius:50%;background:var(--accent-tint);border:1px solid var(--accent-line);display:flex;align-items:center;justify-content:center}
-.empty .mark svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--border-subtle);border:1px solid var(--border-subtle);margin-top:var(--space-5)}
-.gal .slot{aspect-ratio:4/3;background:var(--surface-1);display:flex;align-items:flex-end;padding:var(--space-4);position:relative}
-.gal .slot::after{content:'';position:absolute;inset:var(--space-4);border:1px solid var(--green-line);border-radius:var(--radius-sm)}
-.gal .slot .idx{position:relative;z-index:1;color:var(--text-body)}
+/* ─── GALLERY ─────────────────────────── */
+.work{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-3);margin-top:var(--space-6)}
+.work figure,.ba figure{position:relative;margin:0;overflow:hidden;border-radius:var(--radius-md);border:1px solid var(--border-default);background:var(--surface-inset)}
+.work img,.ba img{width:100%;height:100%;aspect-ratio:3/2;object-fit:cover;transition:transform 1.2s var(--ease-out)}
+.work figure:hover img{transform:scale(1.03)}
+.work .lead{grid-column:span 4}
+.work .lead img{aspect-ratio:21/9}
+.work .half{grid-column:span 2}
+.work figcaption{position:absolute;left:0;right:0;bottom:0;padding:var(--space-6) var(--space-4) var(--space-3);background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--surface-0) 85%,transparent));color:var(--text-body)}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin-top:var(--space-7)}
+.ba .tag{position:absolute;top:var(--space-3);left:var(--space-3);padding:4px 10px;border-radius:var(--radius-sm);background:color-mix(in srgb,var(--surface-0) 82%,transparent);border:1px solid var(--accent-line);color:var(--text-body)}
+.ba img{aspect-ratio:4/3}
 
 /* ─── TRUST / ABOUT ─────────────────────── */
 .founders{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);align-items:center;align-self:center}
@@ -372,6 +376,7 @@ button{font:inherit}
   .band .wrap{flex-direction:column;align-items:flex-start}
   .band .right{align-items:stretch;width:100%}
   .band-photo .wrap{grid-template-columns:1fr}
+  .work{grid-template-columns:1fr}.work .lead,.work .half{grid-column:auto}.work .lead img{aspect-ratio:3/2}
   .area-cta{flex-direction:column;align-items:flex-start}
 }
 @media (max-width:768px){ /* --bp-md */
@@ -420,7 +425,7 @@ button{font:inherit}
 <main>
 <section class="hero" id="top">
   <div class="hero__bokeh" aria-hidden="true"></div>
-  <img class="hero__img" src="assets/hero-graded.jpg" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+  <img class="hero__img" src="assets/hero-dusk.jpg" srcset="assets/hero-dusk-1280.webp 1280w, assets/hero-dusk-1920.webp 1920w, assets/hero-dusk-2560.webp 2560w" sizes="100vw" alt="" width="1920" height="1280" fetchpriority="high" decoding="async">
   <div class="hero__scrim" aria-hidden="true"></div><div class="hero__grade" aria-hidden="true"></div><div class="hero__noise" aria-hidden="true"></div>
   <div class="hero__meta coords" aria-hidden="true"><span class="label">39.1031° N</span><span class="label">84.5120° W</span></div>
   <div class="wrap"><div class="hero__inner">
@@ -458,9 +463,9 @@ button{font:inherit}
 <p class="small" style="margin-top:var(--space-5);max-width:80ch">LED estimates based on ~$0.14/kWh all-in Cincinnati rates and typical LED C9 draw; incandescent figures scale that by the standard 8–10× wattage difference between incandescent and LED C9 bulbs. Your actual cost depends on your supply rate and hours run.</p>
 </div></section>
 <section class="sec" id="products"><div class="wrap"><div class="head head--row"><div class="stack" style="gap:var(--space-4)"><p class="eyebrow"><span class="idx">05</span><span class="rule" aria-hidden="true"></span><span class="label label--gold">What we install</span></p><h2 class="h2 reveal">The products we use.</h2></div><p class="lede reveal reveal-d1">No consumer strands from a big-box store. Every install uses the same commercial-grade hardware professional lighting companies rely on.</p></div><div class="grid grid--4"><div class="cell reveal"><img class="pimg" src="assets/products/c9-led-bulbs.jpg" alt="Three faceted warm-white C9 LED bulbs on green wire" width="1200" height="900" loading="lazy" decoding="async"><span class="idx">01</span><h3 class="h3">Commercial-Grade C9 Bulbs</h3><p class="p">Durable LED C9 bulbs spaced every 12&quot; for a smooth, continuous line of light — not the patchy look of consumer mini-lights.</p></div><div class="cell reveal reveal-d1"><img class="pimg" src="assets/products/gutter-clips.jpg" alt="Clear all-weather light clips, one shown hooked onto a gutter edge" width="1200" height="900" loading="lazy" decoding="async"><span class="idx">02</span><h3 class="h3">All-Weather Roof & Gutter Clips</h3><p class="p">Purpose-built clips grip shingles and gutters without nails, staples, or drilling — zero damage, on or off your roof.</p></div><div class="cell reveal reveal-d2"><img class="pimg" src="assets/products/astronomical-timer.jpg" alt="Weatherproof dusk-sensing outdoor timer with its lid open" width="1200" height="900" loading="lazy" decoding="async"><span class="idx">03</span><h3 class="h3">Dusk-Sensing Timer</h3><p class="p">Turns on at dusk, off overnight automatically, all season — you never touch a switch.</p></div><div class="cell reveal reveal-d2"><img class="pimg" src="assets/products/spt1-wire.jpg" alt="Coil of green SPT-1 outdoor-rated two-conductor wire" width="1200" height="900" loading="lazy" decoding="async"><span class="idx">04</span><h3 class="h3">SPT-1 Weatherproof Wire</h3><p class="p">Sealed, outdoor-rated wire built to handle Cincinnati winters without cracking, fraying, or letting in moisture.</p></div></div></div></section>
-<section class="sec sec--lift" id="gallery"><div class="wrap"><div class="head"><div class="stack" style="gap:var(--space-4)"><p class="eyebrow"><span class="idx">06</span><span class="rule" aria-hidden="true"></span><span class="label label--gold">Our work</span></p><h2 class="h2 reveal">Lighting Cincinnati, one home at a time.</h2></div></div>
-<div class="empty reveal"><div class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4V8z"></path><circle cx="12" cy="13" r="3.5"></circle></svg></div><div class="stack" style="gap:8px"><h3 class="h3">Nothing to show yet — on purpose.</h3><p class="p">The first installs of the 2026 season go up in November. Every photo here will be a real Cincinnati home we lit, never a stock image. Check back.</p></div><a class="btn btn--ghost" href="#quote">Be one of the first</a></div>
-<div class="gal reveal reveal-d1" aria-hidden="true"><div class="slot"><span class="idx">Install 01 · November 2026</span></div><div class="slot"><span class="idx">Install 02 · November 2026</span></div><div class="slot"><span class="idx">Install 03 · November 2026</span></div></div>
+<section class="sec sec--lift" id="gallery"><div class="wrap"><div class="head"><div class="stack" style="gap:var(--space-4)"><p class="eyebrow"><span class="idx">06</span><span class="rule" aria-hidden="true"></span><span class="label label--gold">Our work</span></p><h2 class="h2 reveal">Our first install of the season.</h2></div><p class="lede reveal reveal-d1">Real photos of a real house we lit — no stock, no renders. More go up as every November install is finished.</p></div>
+<div class="work"><figure class="reveal lead"><img src="assets/work/farmhouse-dusk-wide-800.webp" srcset="assets/work/farmhouse-dusk-wide-800.webp 800w, assets/work/farmhouse-dusk-wide-1600.webp 1600w" sizes="(max-width: 1200px) 100vw, 1200px" alt="White farmhouse at dusk with warm-white C9 bulbs outlining every gable, roofline, and the front porch" width="1600" height="1067" loading="lazy" decoding="async"><figcaption class="label">Warm-white C9s, full roofline and gables</figcaption></figure><figure class="reveal half"><img src="assets/work/farmhouse-porch-dusk-800.webp" srcset="assets/work/farmhouse-porch-dusk-800.webp 800w, assets/work/farmhouse-porch-dusk-1600.webp 1600w" sizes="(max-width: 720px) 100vw, 50vw" alt="Close view of a lit farmhouse porch and rooflines at blue hour" width="1600" height="1067" loading="lazy" decoding="async"><figcaption class="label">Porch and upper rooflines</figcaption></figure><figure class="reveal half"><img src="assets/work/roofline-porch-dusk-800.webp" srcset="assets/work/roofline-porch-dusk-800.webp 800w, assets/work/roofline-porch-dusk-1600.webp 1600w" sizes="(max-width: 720px) 100vw, 50vw" alt="Evenly spaced C9 bulbs along a porch roof and second-story eave" width="1600" height="1067" loading="lazy" decoding="async"><figcaption class="label">Even 12-inch bulb spacing</figcaption></figure><figure class="reveal half"><img src="assets/work/gable-roofline-dusk-800.webp" srcset="assets/work/gable-roofline-dusk-800.webp 800w, assets/work/gable-roofline-dusk-1600.webp 1600w" sizes="(max-width: 720px) 100vw, 50vw" alt="Steep gable outlined in warm-white C9 lights against a dusk sky" width="1600" height="1067" loading="lazy" decoding="async"><figcaption class="label">Clean lines on steep gables</figcaption></figure><figure class="reveal half"><img src="assets/work/farmhouse-night-800.webp" srcset="assets/work/farmhouse-night-800.webp 800w, assets/work/farmhouse-night-1600.webp 1600w" sizes="(max-width: 720px) 100vw, 50vw" alt="Farmhouse fully lit with C9 roofline lights at night" width="1600" height="1067" loading="lazy" decoding="async"><figcaption class="label">After dark</figcaption></figure></div><div class="ba"><figure class="reveal"><img src="assets/work/before-daytime-800.webp" srcset="assets/work/before-daytime-800.webp 800w, assets/work/before-daytime-1600.webp 1600w" sizes="(max-width: 720px) 50vw, 600px" alt="The same farmhouse in daylight before the lights went up" width="1600" height="1200" loading="lazy" decoding="async"><span class="tag label">Before</span></figure><figure class="reveal reveal-d1"><img src="assets/work/after-dusk-800.webp" srcset="assets/work/after-dusk-800.webp 800w, assets/work/after-dusk-1600.webp 1600w" sizes="(max-width: 720px) 50vw, 600px" alt="The same farmhouse at dusk with C9 lights on every roofline" width="1600" height="1067" loading="lazy" decoding="async"><span class="tag label">After</span></figure></div>
+
 </div></section>
 <section class="sec" id="why-us"><div class="wrap"><div class="two"><div class="stack"><p class="eyebrow"><span class="idx">07</span><span class="rule" aria-hidden="true"></span><span class="label label--gold">Why 513 Holiday Lighting</span></p><h2 class="h2 reveal">Cincinnati's trusted holiday light pros.</h2><p class="lede reveal reveal-d1">We're a locally owned company founded and run by entrepreneurship students who treat every install like it's our own home — because our name and reputation ride on it.</p></div><div class="tlist"><!-- TODO(insurance): restore "Fully insured" once the liability policy is bound. --><div class="t reveal"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4"></path><path d="M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z"></path></svg></span><div class="stack" style="gap:6px"><h3 class="h4">Commercial-Grade LED Lights</h3><p class="p">We use professional C9 LED bulbs — far brighter and more durable than anything from a big-box store.</p></div></div><div class="t reveal reveal-d1"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L13 18l-3 3-4-4 3-3 6.5-6.5z"></path><path d="M14 3l7 7"></path></svg></span><div class="stack" style="gap:6px"><h3 class="h4">Season-Long Warranty</h3><p class="p">If anything goes wrong — a burnt bulb, a storm, anything — we fix it at no additional cost, period.</p></div></div><div class="t reveal reveal-d2"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7"></path><path d="M5 10v10h14V10"></path><path d="M10 20v-6h4v6"></path></svg></span><div class="stack" style="gap:6px"><h3 class="h4">Student-Founded & Locally Run</h3><p class="p">Started and operated by local entrepreneurship students — hands-on, detail-obsessed, and personally invested in every home we light. Hire us and you're backing young Cincinnati entrepreneurs.</p></div></div></div></div>
 <div style="margin-top:clamp(var(--space-9),10vw,var(--space-11))"><div class="head head--row"><div class="stack" style="gap:var(--space-4)"><p class="eyebrow"><span class="idx">08</span><span class="rule" aria-hidden="true"></span><span class="label label--gold">Our promise</span></p><h2 class="h2 reveal">Zero risk, zero hassle.</h2></div><p class="lede reveal reveal-d1">Letting a company onto your roof is a big ask. Here's exactly what we stand behind.</p></div><div class="grid grid--3"><!-- TODO(insurance): restore "Fully insured" once the liability policy is bound. --><div class="cell reveal"><span class="idx" style="color:var(--accent)">01</span><h3 class="h4">Satisfaction Guaranteed</h3><p class="p">We’re not finished until you look at your home and smile. If it’s not right, we make it right.</p></div><div class="cell reveal reveal-d1"><span class="idx" style="color:var(--accent)">02</span><h3 class="h4">All-Season Maintenance</h3><p class="p">A strand goes dark or a timer slips? One call and we’re back out to fix it — no charge, all season.</p></div><div class="cell reveal reveal-d2"><span class="idx" style="color:var(--accent)">03</span><h3 class="h4">We Handle Takedown</h3><p class="p">In January we take everything down, pack it neatly, and store it for next year. You never touch a ladder.</p></div></div></div>
