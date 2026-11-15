@@ -50,7 +50,7 @@
     "email": "holiday513lighting@outlook.com",
     "address": { "@type": "PostalAddress", "addressLocality": "Cincinnati", "addressRegion": "OH", "addressCountry": "US" },
     "areaServed": ["Cincinnati", "Hyde Park", "Indian Hill", "Anderson Township", "Blue Ash", "Montgomery", "Mason", "West Chester", "Loveland", "Milford", "Madeira", "Mariemont", "Symmes Township", "Terrace Park", "Kenwood", "Sycamore Township"],
-    "priceRange": "$850+",
+    "priceRange": "$600+",
     "serviceType": ["Holiday Lighting Installation", "Christmas Light Installation", "Holiday Light Removal", "Holiday Light Storage", "Holiday Lighting Design"]
   }
   </script>
@@ -227,6 +227,47 @@ button{font:inherit}
 .addons li:last-child{border-bottom:1px solid var(--border-subtle)}
 .addons li span:last-child{color:var(--text-high);font-variant-numeric:tabular-nums;white-space:nowrap}
 .rebook{margin-top:var(--space-5);padding:var(--space-4) var(--space-5);border:1px solid var(--accent-line);background:var(--accent-tint);border-radius:var(--radius-md);font-size:var(--fs-small);color:var(--text-high)}
+.rate{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:var(--space-8);align-items:start}
+.rate .price .small{color:var(--text-body)}
+.rate__side{display:flex;flex-direction:column;gap:var(--space-6)}
+.ex li{display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);padding:14px 0;border-top:1px solid var(--border-subtle)}
+.ex li:last-child{border-bottom:1px solid var(--border-subtle)}
+.ex .ex__head{border-top:0;padding-top:0}
+.ex b{display:block;font-weight:inherit;font-variation-settings:var(--vs-heading);color:var(--text-high)}
+.ex li>span:first-child>span{font-size:var(--fs-small);color:var(--text-muted)}
+.ex__fig{font-variation-settings:var(--vs-display);font-size:28px;line-height:1;color:var(--text-high);font-variant-numeric:tabular-nums;white-space:nowrap}
+.how{display:flex;flex-direction:column;gap:var(--space-4);padding:0;margin:0;list-style:none}
+.how li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:var(--space-3);font-size:var(--fs-small);color:var(--text-body)}
+.how .idx{color:var(--accent);padding-top:3px}
+.how b{font-weight:inherit;font-variation-settings:'wght' 600,'wdth' 100;color:var(--text-high)}
+
+/* ─── LIGHT-COLOR EXPLORER ──────────────── */
+.colors{margin-top:clamp(var(--space-8),8vw,var(--space-10));display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);grid-template-rows:auto 1fr;column-gap:var(--space-8);row-gap:var(--space-5);align-items:start}
+.colors__head{grid-column:1;grid-row:1;display:flex;flex-direction:column;gap:var(--space-4)}
+.colors__pick{grid-column:1;grid-row:2;display:flex;flex-direction:column;gap:var(--space-4);align-items:flex-start}
+.scene{grid-column:2;grid-row:1/span 2;align-self:center;position:relative;border:1px solid var(--border-default);border-radius:var(--radius-lg);background:radial-gradient(90% 75% at 50% 0%,var(--surface-1),var(--surface-deep) 75%);overflow:hidden}
+.scene svg{display:block;width:100%;height:auto}
+.scene .ground{fill:var(--surface-deep)}
+.scene .body{fill:var(--surface-1);stroke:var(--border-subtle)}
+.scene .roof{fill:var(--surface-inset);stroke:var(--border-default)}
+.scene .win{fill:color-mix(in srgb,var(--bulb-warm-white) 14%,transparent);stroke:var(--border-subtle)}
+.scene .door,.scene .gdoor{fill:var(--surface-2);stroke:var(--border-subtle)}
+.scene .trim{fill:var(--surface-2)}
+.scene .gline{fill:none;stroke:var(--border-subtle)}
+.scene .wire{fill:none;stroke:var(--border-default);stroke-width:1.5}
+.scene #bulbs circle{fill:var(--bulb-warm-white)}
+.scene__tag{position:absolute;right:var(--space-4);top:var(--space-3);color:var(--text-body)}
+.swatches{display:flex;flex-wrap:wrap;gap:var(--space-2);border:0;padding:0;margin:0;min-width:0}
+.sw{position:relative}
+.sw input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.sw label{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px 0 12px;border:1px solid var(--border-default);border-radius:var(--radius-pill);cursor:pointer;font-size:var(--fs-small);color:var(--text-body);transition:border-color var(--dur-fast) var(--ease),background var(--dur-fast) var(--ease),color var(--dur-fast) var(--ease)}
+.sw label:hover{border-color:var(--border-strong);color:var(--text-high)}
+.sw input:checked+label{border-color:var(--accent-line);background:var(--accent-tint);color:var(--text-high)}
+.sw input:focus-visible+label{box-shadow:var(--focus-ring)}
+.dots{display:inline-flex;gap:3px}
+.dots i{width:10px;height:10px;border-radius:50%;background:currentColor;box-shadow:0 0 6px currentColor}
+.colors__note{font-size:var(--fs-small);color:var(--text-body);max-width:52ch;min-height:3.2em}
+.colors__note b{font-weight:inherit;font-variation-settings:'wght' 600,'wdth' 100;color:var(--text-high)}
 
 /* ─── RULED LIST / SPEC / COST ──────────── */
 .ruled{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--space-8)}
@@ -370,6 +411,9 @@ button{font:inherit}
   .step::before{display:none}
   .two,.quote-grid,.addons{grid-template-columns:1fr;gap:var(--space-7)}
   .ruled,.spec{grid-template-columns:1fr}
+  .rate{grid-template-columns:1fr;gap:var(--space-7)}
+  .colors{grid-template-columns:1fr;grid-template-rows:none}
+  .colors__head,.colors__pick,.scene{grid-column:auto;grid-row:auto}
   .cost{grid-template-columns:1fr}
   .fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .fgrid>.fcol:first-child{grid-column:1/-1}
@@ -447,19 +491,34 @@ button{font:inherit}
   <div class="wrap"><h2 class="h2 reveal">Warm-glowing C9 LED bulbs, spaced every 12 inches for a smooth, continuous line of light.</h2><p class="label label--in reveal reveal-d1">Not the patchy, uneven look of consumer mini-lights.</p></div>
 </section>
 <section class="sec" id="pricing"><div class="wrap"><div class="head head--row"><div class="stack" style="gap:var(--space-4)"><p class="eyebrow"><span class="idx">03</span><span class="rule" aria-hidden="true"></span><span class="label label--gold">Pricing</span></p><h2 class="h2 reveal">Here is what it costs.</h2></div><p class="lede reveal reveal-d1">One seasonal price covers design, custom-cut commercial-grade C9 LEDs, install, maintenance all season, takedown, and storage until next year. No ladders. No boxes in your garage.</p></div>
-<div class="pk"><div class="card reveal"><div class="stack" style="gap:6px"><h3 class="name">The Classic</h3><p class="fit">Single-story front roofline — about 140 linear feet.</p></div><p class="price"><span class="label label--in">Starting at</span><span class="fig">$850</span></p><ul class="inc"><li>Front roofline in commercial-grade LED</li><li>Automatic dusk-to-night timer</li><li>Design consult, install & in-season service</li><li>Takedown & off-season storage included</li></ul><a class="btn btn--ghost" href="#quote">Get my free quote</a></div><div class="card card--anchor reveal"><span class="label label--gold">Most popular</span><div class="stack" style="gap:6px"><h3 class="name">The Signature</h3><p class="fit">Two-story front with peaks and garage — about 250 linear feet.</p></div><p class="price"><span class="label label--in">Starting at</span><span class="fig">$1,500</span></p><ul class="inc"><li>Everything in The Classic</li><li>Roofline peaks & garage</li><li>Illuminated front entrance accent</li><li>Same-season maintenance, takedown, and storage</li></ul><a class="btn btn--gold" href="#quote">Get my free quote</a></div><div class="card reveal"><div class="stack" style="gap:6px"><h3 class="name">The Estate</h3><p class="fit">The whole property, multi-elevation rooflines — about 400 linear feet.</p></div><p class="price"><span class="label label--in">Starting at</span><span class="fig">$2,400</span></p><ul class="inc"><li>Everything in The Signature</li><li>Multi-elevation rooflines & ridges</li></ul><a class="btn btn--ghost" href="#quote">Get my free quote</a></div></div>
-<p class="flat reveal"><span class="fig">$6 / linear ft</span><span class="small">Pricing is flat: $6 per linear foot, $850 minimum. Every package starts there and is quoted on your actual roofline. Your price is fixed before we install — it does not change after. 50% books your date; balance is due on completion.</span></p>
-<div class="addons"><div class="stack reveal"><p class="eyebrow"><span class="rule" aria-hidden="true"></span><span class="label label--gold">Popular add-ons</span></p><h3 class="h3">Honest, fixed pricing. No quoting games.</h3><p class="p">Add any of these to your package.</p><p class="rebook">Rebook by September 1 and lock a loyalty rate for three seasons — because your lights are already built for your home, year two is a fast, discounted reinstall.</p></div><ul class="reveal reveal-d1"><li><span>Wreath — your own, we install</span><span>$25</span></li><li><span>Wreath — we supply & install</span><span>$75</span></li><li><span>Wrapped tree — under 10 ft</span><span>$125</span></li><li><span>Wrapped tree — 10–20 ft</span><span>$275</span></li><li><span>Gutter cleaning at install — 1 story</span><span>$149</span></li><li><span>Gutter cleaning at install — 2 story</span><span>$199</span></li><li><span>Leave your display up past Jan 10</span><span>$250</span></li></ul></div>
+<div class="rate">
+<div class="card card--anchor reveal"><span class="label label--gold">One flat rate · everything included</span><p class="price"><span class="label label--in">Per linear foot of lights</span><span class="fig">$6</span><span class="small">plus Ohio sales tax · $600 minimum (up to 100 ft)</span></p><ul class="inc"><li>Free measurement and custom design</li><li>Commercial-grade LED C9s, custom-cut to your roofline, in any color</li><li>Installation and an automatic dusk timer</li><li>Free repairs all season, one call away</li><li>January takedown and storage until next year</li></ul><a class="btn btn--gold" href="#quote">Get my exact price</a></div>
+<div class="rate__side reveal reveal-d1"><h3 class="h3">What homes like yours usually pay</h3><ul class="ex"><li class="ex__head"><span class="label">Example home</span><span class="label">Before tax</span></li><li><span><b>Small single-story</b><span>Up to 100 ft · our minimum</span></span><span class="ex__fig">$600</span></li><li><span><b>Single-story front</b><span>About 140 ft</span></span><span class="ex__fig">$840</span></li><li><span><b>Two-story with peaks and garage</b><span>About 250 ft</span></span><span class="ex__fig">$1,500</span></li><li><span><b>Larger home</b><span>About 400 ft</span></span><span class="ex__fig">$2,400</span></li></ul>
+<ol class="how"><li><span class="idx">01</span><span><b>We measure.</b> Every foot of lights on your house, roofline, peaks, and gables, from a photo or a quick visit.</span></li><li><span class="idx">02</span><span><b>You get one fixed price.</b> Your feet × $6. It doesn’t change after we install.</span></li><li><span class="idx">03</span><span><b>25% books your date.</b> The rest is due when your lights are up. Sales tax is listed separately on your invoice.</span></li></ol></div>
+</div>
+<div class="colors" id="colors">
+<div class="colors__head reveal"><p class="eyebrow"><span class="rule" aria-hidden="true"></span><span class="label label--gold">Choose your colors</span></p><h3 class="h3">Any color, same price.</h3><p class="p">Every color is the same $6 a foot. Pick one to see it on the roofline. Want a different look next year? We swap the bulbs and keep your custom-cut set.</p></div>
+<div class="scene reveal reveal-d1" aria-hidden="true"><svg viewBox="100 30 600 290"><defs><filter id="bulbGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><rect class="ground" x="0" y="300" width="800" height="40"/><rect class="body" x="150" y="150" width="300" height="150"/><polygon class="roof" points="130,150 300,50 470,150"/><rect class="body" x="465" y="212" width="190" height="88"/><polygon class="roof" points="455,212 550,165 665,212"/><rect class="win" x="190" y="172" width="44" height="40"/><rect class="win" x="366" y="172" width="44" height="40"/><rect class="win" x="190" y="250" width="44" height="40"/><rect class="win" x="366" y="250" width="44" height="40"/><rect class="door" x="278" y="246" width="44" height="54"/><rect class="trim" x="150" y="228" width="300" height="6"/><rect class="gdoor" x="490" y="232" width="140" height="68"/><path class="gline" d="M490 249h140M490 266h140M490 283h140"/><polyline class="wire" points="130,150 300,50 470,150"/><polyline class="wire" points="455,212 550,165 665,212"/><polyline class="wire" points="160,231 440,231"/><g id="bulbs" filter="url(#bulbGlow)"></g></svg><span class="scene__tag label">Illustration</span></div>
+<div class="colors__pick reveal reveal-d1"><fieldset class="swatches"><legend class="sr">Light color</legend>
+<div class="sw"><input type="radio" name="lightColor" id="lc-warm" value="warm" checked><label for="lc-warm"><span class="dots" aria-hidden="true"><i style="color:var(--bulb-warm-white)"></i></span>Warm white</label></div>
+<div class="sw"><input type="radio" name="lightColor" id="lc-pure" value="pure"><label for="lc-pure"><span class="dots" aria-hidden="true"><i style="color:var(--bulb-pure-white)"></i></span>Pure white</label></div>
+<div class="sw"><input type="radio" name="lightColor" id="lc-multi" value="multi"><label for="lc-multi"><span class="dots" aria-hidden="true"><i style="color:var(--bulb-red-lit)"></i><i style="color:var(--bulb-amber)"></i><i style="color:var(--bulb-green)"></i><i style="color:var(--bulb-blue)"></i></span>Multicolor</label></div>
+<div class="sw"><input type="radio" name="lightColor" id="lc-redwhite" value="redwhite"><label for="lc-redwhite"><span class="dots" aria-hidden="true"><i style="color:var(--bulb-red-lit)"></i><i style="color:var(--bulb-pure-white)"></i></span>Red &amp; white</label></div>
+<div class="sw"><input type="radio" name="lightColor" id="lc-redgreen" value="redgreen"><label for="lc-redgreen"><span class="dots" aria-hidden="true"><i style="color:var(--bulb-red-lit)"></i><i style="color:var(--bulb-green)"></i></span>Red &amp; green</label></div>
+<div class="sw"><input type="radio" name="lightColor" id="lc-custom" value="custom"><label for="lc-custom"><span class="dots" aria-hidden="true"><i style="color:var(--bulb-blue)"></i><i style="color:var(--bulb-pure-white)"></i></span>Custom</label></div>
+</fieldset><p class="colors__note" id="colorNote" aria-live="polite"><b>Warm white.</b> The classic: a soft, cozy glow that suits brick, stone, and traditional homes.</p><a class="btn btn--ghost" href="#quote" id="colorCta">Quote my house in warm white</a></div>
+</div>
+<div class="addons"><div class="stack reveal"><p class="eyebrow"><span class="rule" aria-hidden="true"></span><span class="label label--gold">Add-ons</span></p><h3 class="h3">Honest, fixed pricing. No quoting games.</h3><p class="p">Add any of these to a roofline install. Add-ons count toward the $600 minimum. Prices are before sales tax.</p><p class="rebook">Rebook by September 1 and your price is locked for three seasons. Your lights are already built for your home, so next year is a fast reinstall.</p></div><ul class="reveal reveal-d1"><li><span>Wreath — your own, we hang it</span><span>Free</span></li><li><span>Wreath — we supply &amp; hang</span><span>$75</span></li><li><span>Tree — trunk wrap</span><span>$95</span></li><li><span>Tree — full wrap, under 10 ft</span><span>$175</span></li><li><span>Bushes — per net light (most bushes take one)</span><span>$55</span></li><li><span>Gutter cleaning at install — 1 story</span><span>$149</span></li><li><span>Gutter cleaning at install — 2 story</span><span>$199</span></li></ul></div>
 </div></section>
 <section class="sec sec--lift" id="details"><div class="wrap"><div class="head head--row"><div class="stack" style="gap:var(--space-4)"><p class="eyebrow"><span class="idx">04</span><span class="rule" aria-hidden="true"></span><span class="label label--gold">The details</span></p><h2 class="h2 reveal">Exactly how we do it.</h2></div><p class="lede reveal reveal-d1">No mystery, no guesswork. Here's precisely what happens from the first measurement to January takedown.</p></div>
 <div class="ruled"><div class="row reveal"><span class="idx" style="color:var(--accent)">01</span><div class="stack" style="gap:6px"><h3 class="h4">We measure your home to the foot</h3><p class="p">We walk and measure every roofline, peak, gable, and feature so your design — and your price — fit your house exactly, with nothing guessed.</p></div></div><div class="row reveal"><span class="idx" style="color:var(--accent)">02</span><div class="stack" style="gap:6px"><h3 class="h4">Your lights are built in our shop</h3><p class="p">Each run is custom-cut and assembled to your measurements on weatherproof commercial wire. No sagging, gapping store-bought strands — your set fits your roofline like it was made for it, because it was.</p></div></div><div class="row reveal"><span class="idx" style="color:var(--accent)">03</span><div class="stack" style="gap:6px"><h3 class="h4">Commercial-grade LED C9 bulbs</h3><p class="p">We use durable, warm-glowing C9 LED bulbs spaced every 12 inches for a smooth, continuous line of light — not the patchy, uneven look of consumer mini-lights.</p></div></div><div class="row reveal"><span class="idx" style="color:var(--accent)">04</span><div class="stack" style="gap:6px"><h3 class="h4">Zero damage to your home</h3><p class="p">Bulbs clip onto your shingles and gutters with all-weather fasteners. No staples, no nails, no drilling, no holes — ever. When we take them down in January, there’s no trace we were on your roof but the memory of how good it looked.</p></div></div><div class="row reveal"><span class="idx" style="color:var(--accent)">05</span><div class="stack" style="gap:6px"><h3 class="h4">Clean power, automatic timing</h3><p class="p">Runs connect with sealed, weatherproof plugs to a single outdoor GFCI outlet and a dusk-sensing timer — it turns on at dusk, off overnight automatically, all season. You never touch a switch.</p></div></div><div class="row reveal"><span class="idx" style="color:var(--accent)">06</span><div class="stack" style="gap:6px"><h3 class="h4">Barely-there energy use</h3><p class="p">Because everything is LED, your display sips power — a typical home adds only a few dollars a month (see the exact numbers below).</p></div></div><div class="row reveal"><span class="idx" style="color:var(--accent)">07</span><div class="stack" style="gap:6px"><h3 class="h4">We’re on call all season</h3><p class="p">A bulb goes dark or a timer drifts? One call and we’re back out to fix it — free, every time, all season long.</p></div></div><div class="row reveal"><span class="idx" style="color:var(--accent)">08</span><div class="stack" style="gap:6px"><h3 class="h4">Takedown & safe storage</h3><p class="p">In January we remove everything and store your custom-built set for you. Next season is a quick reinstall at your locked-in renewal rate — no measuring, no rebuilding.</p></div></div></div>
 <div class="sub"><p class="eyebrow"><span class="rule" aria-hidden="true"></span><span class="label label--gold">LED or incandescent?</span></p><p class="lede">We install commercial-grade C9 bulbs in either style. LED is our default recommendation, but here’s an honest side-by-side so you can choose with your eyes open.</p></div>
 <div class="spec">
-<div class="card reveal"><span class="tag">Recommended</span><h3 class="h3">LED C9</h3><div class="kv"><div><span>The look</span><span>Crisp, bright warm-white glow</span></div><div><span>Cost per season</span><span>~$3–$19</span></div><div><span>Bulb lifespan</span><span>Rated for multiple seasons</span></div><div><span>Heat</span><span>Cool to the touch</span></div></div><p class="p small">Efficient and durable — it costs pennies to run all season and is far less likely to need a mid-season fix. Our default for every package.</p></div>
+<div class="card reveal"><span class="tag">Recommended</span><h3 class="h3">LED C9</h3><div class="kv"><div><span>The look</span><span>Crisp, bright warm-white glow</span></div><div><span>Cost per season</span><span>~$3–$19</span></div><div><span>Bulb lifespan</span><span>Rated for multiple seasons</span></div><div><span>Heat</span><span>Cool to the touch</span></div></div><p class="p small">Efficient and durable — it costs pennies to run all season and is far less likely to need a mid-season fix. Our default for every install.</p></div>
 <div class="card reveal reveal-d1"><span class="tag tag--warn">Classic option</span><h3 class="h3">Incandescent C9</h3><div class="kv"><div><span>The look</span><span>Deeper, warmer amber glow</span></div><div><span>Cost per season</span><span>Roughly 8–10× LED</span></div><div><span>Bulb lifespan</span><span>Shorter — burns out sooner</span></div><div><span>Heat</span><span>Runs noticeably hot</span></div></div><p class="p small">The nostalgic, old-fashioned glow some homeowners grew up with — it just draws far more power and needs more mid-season bulb swaps.</p></div>
 </div>
-<div class="sub"><p class="eyebrow"><span class="rule" aria-hidden="true"></span><span class="label label--gold">What it costs to run</span></p><p class="lede">Running about 6 hours a night for the whole season, at current Cincinnati (Duke Energy) rates, here’s what each package adds to your bill — LED vs. old-style incandescent:</p></div>
-<div class="cost"><div class="c reveal"><span class="label">The Classic</span><span class="led">$3–$6</span><span class="label label--in">LED · for the entire season</span><span class="inc-amt">$24–$60 incandescent</span></div><div class="c reveal reveal-d1"><span class="label">The Signature</span><span class="led">$6–$11</span><span class="label label--in">LED · for the entire season</span><span class="inc-amt">$48–$110 incandescent</span></div><div class="c reveal reveal-d2"><span class="label">The Estate</span><span class="led">$10–$19</span><span class="label label--in">LED · for the entire season</span><span class="inc-amt">$80–$190 incandescent</span></div></div>
+<div class="sub"><p class="eyebrow"><span class="rule" aria-hidden="true"></span><span class="label label--gold">What it costs to run</span></p><p class="lede">Running about 6 hours a night for the whole season, at current Cincinnati (Duke Energy) rates, here’s what each example home adds to your bill — LED vs. old-style incandescent:</p></div>
+<div class="cost"><div class="c reveal"><span class="label">Single-story front · ~140 ft</span><span class="led">$3–$6</span><span class="label label--in">LED · for the entire season</span><span class="inc-amt">$24–$60 incandescent</span></div><div class="c reveal reveal-d1"><span class="label">Two-story with peaks · ~250 ft</span><span class="led">$6–$11</span><span class="label label--in">LED · for the entire season</span><span class="inc-amt">$48–$110 incandescent</span></div><div class="c reveal reveal-d2"><span class="label">Larger home · ~400 ft</span><span class="led">$10–$19</span><span class="label label--in">LED · for the entire season</span><span class="inc-amt">$80–$190 incandescent</span></div></div>
 <p class="small" style="margin-top:var(--space-5);max-width:80ch">LED estimates based on ~$0.14/kWh all-in Cincinnati rates and typical LED C9 draw; incandescent figures scale that by the standard 8–10× wattage difference between incandescent and LED C9 bulbs. Your actual cost depends on your supply rate and hours run.</p>
 </div></section>
 <section class="sec" id="products"><div class="wrap"><div class="head head--row"><div class="stack" style="gap:var(--space-4)"><p class="eyebrow"><span class="idx">05</span><span class="rule" aria-hidden="true"></span><span class="label label--gold">What we install</span></p><h2 class="h2 reveal">The products we use.</h2></div><p class="lede reveal reveal-d1">No consumer strands from a big-box store. Every install uses the same commercial-grade hardware professional lighting companies rely on.</p></div><div class="grid grid--4"><div class="cell reveal"><img class="pimg" src="assets/products/c9-led-bulbs.jpg" alt="Three faceted warm-white C9 LED bulbs on green wire" width="1200" height="900" loading="lazy" decoding="async"><span class="idx">01</span><h3 class="h3">Commercial-Grade C9 Bulbs</h3><p class="p">Durable LED C9 bulbs spaced every 12&quot; for a smooth, continuous line of light — not the patchy look of consumer mini-lights.</p></div><div class="cell reveal reveal-d1"><img class="pimg" src="assets/products/gutter-clips.jpg" alt="Clear all-weather light clips, one shown hooked onto a gutter edge" width="1200" height="900" loading="lazy" decoding="async"><span class="idx">02</span><h3 class="h3">All-Weather Roof & Gutter Clips</h3><p class="p">Purpose-built clips grip shingles and gutters without nails, staples, or drilling — zero damage, on or off your roof.</p></div><div class="cell reveal reveal-d2"><img class="pimg" src="assets/products/astronomical-timer.jpg" alt="Weatherproof dusk-sensing outdoor timer with its lid open" width="1200" height="900" loading="lazy" decoding="async"><span class="idx">03</span><h3 class="h3">Dusk-Sensing Timer</h3><p class="p">Turns on at dusk, off overnight automatically, all season — you never touch a switch.</p></div><div class="cell reveal reveal-d2"><img class="pimg" src="assets/products/spt1-wire.jpg" alt="Coil of green SPT-1 outdoor-rated two-conductor wire" width="1200" height="900" loading="lazy" decoding="async"><span class="idx">04</span><h3 class="h3">SPT-1 Weatherproof Wire</h3><p class="p">Sealed, outdoor-rated wire built to handle Cincinnati winters without cracking, fraying, or letting in moisture.</p></div></div></div></section>
@@ -487,6 +546,7 @@ button{font:inherit}
 <div class="field"><span class="lab" id="photoLab">Photo of your house <em style="font-style:normal;text-transform:none;letter-spacing:0">— optional</em></span>
   <label class="upload" id="upload" for="photo"><img class="thumb" id="thumb" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><span class="stack" style="gap:2px"><span class="t1" id="upT1">Add a photo — get a quote within one business day</span><span class="t2" id="upT2">JPG or PNG, up to 10 MB. Shoot from the street in daylight.</span></span><span class="btn btn--ghost btn--sm" aria-hidden="true">Choose file</span><input id="photo" name="photo" type="file" accept="image/*" aria-labelledby="photoLab"></label>
 </div>
+<div class="field"><label for="light_color">Light color <em>— optional</em></label><select id="light_color" name="light_color"><option value="Not sure yet">Not sure yet</option><option value="Warm white">Warm white</option><option value="Pure white">Pure white</option><option value="Multicolor">Multicolor</option><option value="Red &amp; white">Red &amp; white</option><option value="Red &amp; green">Red &amp; green</option><option value="Custom">Custom (tell us below)</option></select></div>
 <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="4" placeholder="What do you want lit? Roofline, trees, walkway…"></textarea></div>
 <div class="fbar"><button class="btn btn--gold btn--lg" type="submit" id="submitBtn">Get my free quote <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button><span class="small">Free · No obligation · We reply within one business day</span></div>
 </form>
@@ -539,6 +599,48 @@ button{font:inherit}
       var vh = window.innerHeight;
       targets.forEach(function(el){ var r = el.getBoundingClientRect(); if (r.top < vh && r.bottom > 0) el.classList.add('in'); });
     }, 600); });
+  }
+
+  // light-color explorer: recolors the illustrated roofline. Every color is the same price.
+  var bulbGroup = document.getElementById('bulbs');
+  if (bulbGroup) {
+    var NS = 'http://www.w3.org/2000/svg', GAP = 17, bulbs = [];
+    var runs = [[[130,150],[300,50],[470,150]], [[455,212],[550,165],[665,212]], [[160,231],[440,231]]];
+    runs.forEach(function(run){
+      var carry = 0;
+      for (var s = 0; s < run.length - 1; s++) {
+        var a = run[s], b = run[s+1], dx = b[0]-a[0], dy = b[1]-a[1], len = Math.sqrt(dx*dx + dy*dy), d;
+        for (d = carry; d <= len; d += GAP) {
+          var c = document.createElementNS(NS, 'circle');
+          c.setAttribute('cx', (a[0] + dx*d/len).toFixed(1));
+          c.setAttribute('cy', (a[1] + dy*d/len).toFixed(1));
+          c.setAttribute('r', '4.2');
+          bulbGroup.appendChild(c); bulbs.push(c);
+        }
+        carry = d - len;
+      }
+    });
+    var COLORS = {
+      warm:     {name:'Warm white',  bulbs:['--bulb-warm-white'], note:'<b>Warm white.</b> The classic: a soft, cozy glow that suits brick, stone, and traditional homes.'},
+      pure:     {name:'Pure white',  bulbs:['--bulb-pure-white'], note:'<b>Pure white.</b> Crisp and modern: bright, clean light that pops on white trim and newer builds.'},
+      multi:    {name:'Multicolor',  bulbs:['--bulb-red-lit','--bulb-amber','--bulb-green','--bulb-blue'], note:'<b>Multicolor.</b> Old-school and fun: red, gold, green, and blue, the way you remember it.'},
+      redwhite: {name:'Red & white', bulbs:['--bulb-red-lit','--bulb-pure-white'], note:'<b>Red &amp; white.</b> Candy cane: alternating red and white, bold from the street.'},
+      redgreen: {name:'Red & green', bulbs:['--bulb-red-lit','--bulb-green'], note:'<b>Red &amp; green.</b> Traditional Christmas: alternating red and green.'},
+      custom:   {name:'Custom',      bulbs:['--bulb-blue','--bulb-pure-white'], note:'<b>Custom.</b> Blue and white (shown), team colors, or any mix of our colors. Twinkle bulbs cost extra. Tell us what you want in your quote request.'}
+    };
+    var colorNote = document.getElementById('colorNote'), colorCta = document.getElementById('colorCta'), colorSelect = document.getElementById('light_color');
+    var paint = function(key){
+      var opt = COLORS[key] || COLORS.warm;
+      bulbs.forEach(function(c, i){ c.style.fill = 'var(' + opt.bulbs[i % opt.bulbs.length] + ')'; });
+      colorNote.innerHTML = opt.note;
+      colorCta.textContent = key === 'custom' ? 'Quote my custom colors' : 'Quote my house in ' + opt.name.toLowerCase();
+      colorCta.setAttribute('data-color', opt.name);
+    };
+    var radios = document.querySelectorAll('input[name="lightColor"]');
+    radios.forEach(function(r){ r.addEventListener('change', function(){ if (r.checked) paint(r.value); }); });
+    colorCta.addEventListener('click', function(){ if (colorSelect) colorSelect.value = colorCta.getAttribute('data-color'); });
+    var picked = document.querySelector('input[name="lightColor"]:checked');
+    paint(picked ? picked.value : 'warm');
   }
 
   // quote form: photo preview + async submit to Netlify Forms

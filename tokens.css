@@ -24,6 +24,16 @@
   --bulb-red:        #C0472F;
   --bulb-cool-white: #BFD4E8;
 
+  /* Bulb colors for the light-color explorer in #pricing. Product depiction only:
+     these paint lit bulbs in the illustration and the swatch dots, never UI.
+     Do not use them for text, fills, borders, or accents. The green is a bulb,
+     not a brand accent (see DESIGN.md). */
+  --bulb-pure-white: #EEF3F6; /* crisp white bulb, deliberately not pure #FFF */
+  --bulb-red-lit:    #E2503A; /* red bulb when lit, brighter than the hero's --bulb-red */
+  --bulb-green:      #2FB36A;
+  --bulb-blue:       #3F7FE8;
+  --bulb-amber:      #F2B33D;
+
   /* --------------------------------------------------------------------------
      1 · SURFACES  (derived warm-dark elevation ladder above the ink ground)
      -------------------------------------------------------------------------- */

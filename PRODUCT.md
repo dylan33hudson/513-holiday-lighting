@@ -64,10 +64,18 @@ a more beautiful result than you'd manage yourself.
 - Outside the hero, keep existing copy verbatim unless fixing a grammatical error. Where the
   quote-form design board supplies copy (pricing, form labels, error and success messages), that
   copy wins over the older `index.html` equivalents.
-- Pricing is flat and public: $6 per linear foot, $850 minimum, quoted on the actual roofline and
-  fixed before install. Packages are pure $6/ft math: The Classic from $850 (~140 ft), The Signature
-  from $1,500 (~250 ft), The Estate from $2,400 (~400 ft). Add-on prices carry over from the
-  original page. Extra roofline is $6/ft, not the old $6.50.
+- Pricing is flat and public (updated Nov 2026): $6 per linear foot plus Ohio sales tax, $600 minimum
+  (covers up to 100 ft), quoted on the actual roofline and fixed before install. Sales tax is always
+  shown as "plus Ohio sales tax" and listed separately on invoices; Ohio law bars advertising
+  tax-included prices. 25% books the date; the balance is due when the lights are up. There are no
+  packages: the pricing section shows example homes (up to 100 ft $600, ~140 ft $840, ~250 ft
+  $1,500, ~400 ft $2,400). Every light color is the same price. Add-ons (only with a roofline install): customer's
+  own wreath hung free, supplied wreath $75, trunk wrap $95, full tree wrap under 10 ft $175 (no trees
+  over 10 ft this season), bushes $55 per net light, gutter cleaning $149 (1 story) / $199 (2 story).
+  Add-ons count toward the minimum. Standard colors are all the same price; twinkle bulbs cost
+  extra. Rebook by September 1 locks the price for three seasons. This replaces
+  the $850 minimum, the Classic/Signature/Estate packages, the 50% deposit, the $25 own-wreath fee,
+  and the past-Jan-10 fee.
 - Service area is Hamilton, Butler, Warren, and Clermont counties (West Chester is in Butler).
 - The quote form submits to Netlify Forms (`data-netlify`), which also carries the photo upload.
   Notifications are configured in the Netlify dashboard, not in code.
