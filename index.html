@@ -536,6 +536,7 @@ button{font:inherit}
 <section class="sec sec--lift" id="quote"><div class="wrap"><div class="quote-grid"><div class="stack"><p class="eyebrow"><span class="idx">11</span><span class="rule" aria-hidden="true"></span><span class="label label--gold">Free quote</span></p><h2 class="h2 reveal">Send a photo,<br>get a quote within<br>one business day.</h2><p class="lede reveal reveal-d1">Snap the front of your house from the street. We measure the roofline off the photo and price it. No site visit, no sales call.</p><ul class="inc reveal reveal-d2" style="flex:0"><li>One reply within one business day</li><li>Fixed price before anything is installed</li><li>Greater Cincinnati — Hamilton, Butler, Warren, and Clermont counties</li></ul></div>
 <form class="form reveal" id="quoteForm" name="quote" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" novalidate>
 <input type="hidden" name="form-name" value="quote">
+<input type="hidden" name="source" id="leadSource" value="website">
 <p class="sr" aria-hidden="true"><label>Don’t fill this out if you’re human: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 <div class="alert" id="formError" role="alert"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v5M12 16.5v.5"></path><circle cx="12" cy="12" r="9"></circle></svg><span><b>That didn't send.</b>Try again, or text the same details to (330) 466-4011 and we'll pick it up there.</span></div>
 <div class="f2"><div class="field"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" required autocomplete="name"><span class="err"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v5M12 16.5v.5"></path><circle cx="12" cy="12" r="9"></circle></svg><span>Tell us who to reply to.</span></span></div><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@email.com" required autocomplete="email"><span class="err"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v5M12 16.5v.5"></path><circle cx="12" cy="12" r="9"></circle></svg><span>Add the part after the @ so we can send your quote.</span></span></div><div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="(513) 000-0000" required autocomplete="tel"><span class="err"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v5M12 16.5v.5"></path><circle cx="12" cy="12" r="9"></circle></svg><span>Enter a phone number we can text.</span></span></div><div class="field"><label for="address">Address or neighborhood</label><input id="address" name="address" type="text" placeholder="Street or neighborhood" required autocomplete="street-address"><span class="err"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v5M12 16.5v.5"></path><circle cx="12" cy="12" r="9"></circle></svg><span>A street or neighborhood helps us price the roofline.</span></span></div></div>
@@ -563,6 +564,10 @@ button{font:inherit}
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // lead source: flyer QR codes land on /?src=flyer, which tags the quote request
+  var leadSrc = new URLSearchParams(window.location.search).get('src');
+  if (leadSrc) { var ls = document.getElementById('leadSource'); if (ls) ls.value = leadSrc.slice(0, 40); }
 
   // sticky nav
   var nav = document.getElementById('nav');
